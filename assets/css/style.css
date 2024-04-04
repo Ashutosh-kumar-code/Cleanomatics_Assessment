@@ -1,0 +1,239 @@
+body {
+  margin: 0;
+  font-family: "Poppins";
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1d1d1d;
+  overflow-x: hidden;
+  padding: 0px;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --heading-mid-12: 0.75rem;
+  --heading-mid-14: 0.875rem;
+  --heading-mid-16: 1rem;
+  --heading-big-18: 1.125rem;
+  --heading-big-24: 1.5rem;
+  --heading-big-38: 2.375rem;
+  --heading-big-20: 1.25rem;
+  --heading-big-32: 2rem;
+
+}
+
+p{
+  margin-bottom: 0px;
+}
+
+li{
+  list-style: none;
+}
+
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.ttf");
+    font-weight: 400;
+  
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Medium.ttf");
+    font-weight: 500;
+  
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-SemiBold.ttf");
+    font-weight: 600;
+  
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Bold.ttf");
+    font-weight: 700;
+  
+}
+
+
+.topheading{
+margin-bottom: 20px;
+font-size: var(--heading-big-20);
+text-align: center;
+background-image: linear-gradient(90deg, red, #263099);
+background-clip: text;
+color: transparent;
+margin-top: 40px;
+}
+
+.topsearch_flexdiv{
+display: flex;
+align-items: center;
+margin-bottom: 40px;
+}
+.topsearch_flexdiv input{
+border: 1px solid #d7dae1;
+outline: none;
+padding: 10px;
+width: 100%;
+color: #aeaac0;
+}
+.topsearch_flexdiv input::placeholder{
+  color: #aeaac0; 
+}
+
+.topsearch_flexdiv .search_btn{
+background: #263099;
+border: none;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 46px;
+width: 46px;
+}
+.topsearch_flexdiv .search_btn img{
+height: 20px;
+}
+
+/* -------- product card section ------- */
+
+.products_maindiv .product_card1{
+margin-bottom: 40px;
+
+}
+.products_maindiv .product_card1 .card_imgpart{
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.products_maindiv .product_card1 .card_imgpart:hover{
+  transition: 0.3s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.products_maindiv .product_card1 .card_imgpart img{
+  height: 200px;
+}
+
+.products_maindiv .product_card1 h5{
+  color: #1d1d1d;
+  font-size: var(--heading-big-20);
+  font-weight: 500;
+  text-align: center;
+  margin-top: 20px;
+  
+}
+
+
+/* ----------- caresoul section ------- */
+
+.hotdeal_heading{
+color: #1d1d1d;
+font-weight: 500;
+margin-bottom: 30px;
+font-size: var(--heading-big-24);
+}
+
+.hotdetals_card1{
+  padding: 2% 5% 0% 2%;
+  border-radius: 12px;
+
+  background-image: url('../img/wp7398744.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+ 
+}
+.hotcard_rightimage{
+  display: flex;
+  justify-content: start;
+  align-items: end;
+}
+.hotcard_rightimage img{
+  height: 200px;
+  margin-bottom: -20px;
+}
+.hotdetals_card1 .hotcard_leftcontent{
+  margin-bottom: 30px;
+}
+.hotdetals_card1 h2{
+  color: #FFFFFF;
+  margin-bottom: -4px;
+  margin-top: 0px;
+  font-size: var(--heading-big-24);
+  font-weight: 600;
+}
+.hotdetals_card1 h2 span{
+  color: yellow;
+  font-size: var(--heading-big-20);
+}
+
+.hotdetals_card1 h3{
+  color: #FFFFFF;
+  margin: 0px;
+  margin-top: 40px;
+
+}
+
+.hotdetals_card1 p{
+  color: #FFFFFF;
+  margin-bottom: 0px;
+
+}
+.hotdetals_card1 p span{
+  color: yellow;
+}
+.hotdetals_card1 .use_flat{
+  margin-top: 6px;
+}
+
+.hotdetals_card1 .availbutton{
+  background: yellow;
+  color: #263099;
+  padding: 4px 14px;
+  border: 2px solid yellow;
+  margin-top: 25px;
+  width: fit-content;
+ 
+} 
+.hotdetals_card1 .availbutton a{
+  text-decoration: none;
+}
+.hotdetals_card1 .availbutton:hover{
+transition: 0.3s;
+  background: transparent;
+  color: yellow;
+}
+.hotdetals_card1 .availbutton:hover a{
+  color: yellow;
+}
+
+.carousel-inner img{
+  height: 300px;
+}
+
+.carousel-indicators li{
+  height: 12px !important;
+  width: 12px !important;
+  border-radius: 100px !important;
+}
+
+.carousel-control-prev-icon{
+display: none !important;
+}
+
+.carousel-control-next-icon{
+  display: none !important;
+}
+
+#carouselExampleIndicators{
+  margin-bottom: 80px;
+}

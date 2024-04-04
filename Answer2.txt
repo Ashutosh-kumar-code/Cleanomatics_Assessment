@@ -1,0 +1,35 @@
+const fetchContactsData = async() => {
+    // Assume an API call to fetch contacts
+    return fetch('https://our-api.com/contacts')
+        .then(response => response.json())
+        .catch(error => console.error('Error fetching contacts:', error));
+}
+
+const fetchDealsData = async (year) => {
+    // Assume an API call to fetch deals for a specific year
+    return fetch('https://our-api.com/deals?year=${year}')
+        .then(response => response.json())
+        .catch(error => console.error(`Error fetching deals for year ${year}:`, error));
+}
+
+const syncDealsWithContacts = async () => {
+    try {
+        const contacts = await fetchContactsData();
+        for (const contact of contacts) {
+            const contactId = contact.id;
+            const contactName = contact.name;
+            const deals = await fetchDealsData(2021); // Fetch deals for 2021
+            for (const deal of deals) {
+                if (deal.contactId === contactId) {
+                    
+                    console.log(`Syncing deal '${deal.dealName}' with contact '${contactName}'`);
+                }
+            }
+        }
+    } catch (error) {
+        console.error('Error syncing deals with contacts:', error);
+    }
+}
+
+// Sync deals with contacts from 2021 to present day
+syncDealsWithContacts();

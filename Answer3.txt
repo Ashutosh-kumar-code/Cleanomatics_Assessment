@@ -1,0 +1,46 @@
+const ExcelJS = require('exceljs');
+const axios = require('axios');
+
+// Function to read data from Excel file
+async function readExcel(filePath) {
+    const workbook = new ExcelJS.Workbook();
+    await workbook.xlsx.readFile(filePath);
+    const worksheet = workbook.getWorksheet(1);
+    const data = [];
+
+    worksheet.eachRow((row, rowNumber) => {
+        if (rowNumber !== 1) { // Skip header row
+            const rowData = [];
+            row.eachCell((cell) => {
+                rowData.push(cell.value);
+            });
+            data.push(rowData);
+        }
+    });
+
+    return data;
+}
+
+// Function to post data to REST API
+async function postData(data) {
+    try {
+        const response = await axios.post('YOUR_REST_API_URL', data);
+        console.log('Data successfully transferred:', response.data);
+    } catch (error) {
+        console.error('Error transferring data:', error);
+    }
+}
+
+// Example usage
+const excelFilePath = 'path/to/your/excel/file.xlsx';
+readExcel(excelFilePath)
+    .then((data) => {
+        // Assuming your API expects data in a specific format
+        const postDataFormat = {
+            data: data,
+        };
+        return postData(postDataFormat);
+    })
+    .catch((error) => {
+        console.error('Error reading Excel file:', error);
+    });

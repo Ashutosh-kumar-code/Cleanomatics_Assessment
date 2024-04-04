@@ -1,0 +1,7 @@
+Answer 1 = Open the index.html file in the live server, I completed the designing with functionality .
+
+Answer 2 = Answer second of assessment is in the txt file of name Answer2.txt . 
+           I use javascript to answer this.
+
+Answer 3 = Answer second of assessment is in the txt file of name Answer3.txt . 
+           I use nodejs to answer this question.
